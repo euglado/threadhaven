@@ -1,0 +1,9 @@
+# Security / Güvenlik
+
+Do not post secrets in issues, pull requests or logs. If a bot token leaks, reset it immediately in Discord Developer Portal, stop the old process and reconfigure. Use GitHub's private vulnerability reporting when available; otherwise contact the repository owner privately without exploit secrets. No guaranteed response time is offered.
+
+Run one process, use only View Channel/Create Public Threads, and never grant the bot Administrator. Anyone controlling its token can exercise Discord permissions directly outside these application checks. Limit channel access, keep Node 24/dependencies patched and review changed lockfiles and CI actions. Permission checks involve several endpoints and cannot eliminate simultaneous administrator races. Thread creation has no idempotency key; uncertain responses must be checked manually before a new preview. Public threads are unsuitable for confidential support.
+
+Sorun/PR/günlüklere gizli bilgi koymayın. Token sızarsa Discord Developer Portal'dan hemen yenileyin, eski süreci durdurun ve yeniden yapılandırın. Varsa GitHub özel güvenlik bildirimini kullanın; yoksa depo sahibine gizli istismar verilerini paylaşmadan özelden ulaşın. Yanıt süresi garantisi yoktur.
+
+Tek süreç çalıştırın, yalnızca Kanalı Görüntüle/Herkese Açık Alt Başlık Oluştur izinleri verin ve bota Yönetici vermeyin. Tokenı ele geçiren kişi uygulamanın kontrolleri dışından Discord izinlerini kullanabilir. Kanal erişimini sınırlayın, Node 24/bağımlılıkları güncel tutun, lockfile ve CI değişikliklerini inceleyin. Birden çok uçtaki izin kontrolleri aynı anda yapılan yönetici değişikliğini atomik önleyemez. Başlık oluşturmada idempotency anahtarı yoktur; belirsiz yanıtta yeni önizlemeden önce elle kontrol gerekir. Herkese açık başlıklar gizli destek için uygun değildir.
